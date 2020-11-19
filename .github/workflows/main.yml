@@ -10,6 +10,6 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Build docker image
-        uses: kimajin/latex_action/.github/actions/latex@master
+        uses: kimajin/latex_action/.github/actions/latex@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
