@@ -8,9 +8,9 @@ ptex2pdf -l -ot -kanji=utf8 main.tex
 res=`curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://api.github.com/repos/$GITHUB_REPOSITORY/releases \
 -d "
 {
-  \"tag_name\": \"$(echo ${GITHUB_REF:10})\",
+  \"tag_name\": \"$GITHUB_SHA\",
   \"target_commitish\": \"$GITHUB_SHA\",
-  \"name\": \"main.pdf $(echo ${GITHUB_REF:10})\",
+  \"name\": \"main.pdf $GITHUB_SHA\",
   \"draft\": false,
   \"prerelease\": false
 }"`
