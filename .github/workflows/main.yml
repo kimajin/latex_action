@@ -3,7 +3,6 @@ name: LaTeX to PDF
 on:
   push:
     paths: main.tex
-    tags: v*.*.*
 
 jobs:
   build:
